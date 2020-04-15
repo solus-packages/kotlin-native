@@ -1,8 +1,16 @@
 name       : kotlin-native
-version    : 1.3.71
-release    : 2
+version    : 1.3.72
+release    : 3
 source     :
-    - https://github.com/JetBrains/kotlin-native/archive/v1.3.71.tar.gz : 58a9b7a1a9bb56bbd4ae642804d140f173cec216309146ffe706b1d10a369ce6
+    - https://github.com/JetBrains/kotlin-native/archive/v1.3.72.tar.gz : 1f53ec1996b0f79ca615549fa5dc8485ef356cfab413212dceac64362ea6a13d
+    - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
+    - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-2-linux-mips.tar.gz : b1703b2f0e1fc9e5620330f1d43c00b85ae65289796a51b827db81335207ff01
+    - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-3-linux-x86-64.tar.gz : ca25fc933fe45deb142f2672d3773227a65e652ebeb7bc6cc8425f747c5f8912
+    - https://download.jetbrains.com/kotlin/native/target-toolchain-2-linux-android_ndk.tar.gz : c53c127a26eec3e471a2f8fcb88484b8b22832aafd9115205b33beb84255dd10
+    - https://download.jetbrains.com/kotlin/native/target-sysroot-1-android_ndk.tar.gz : 7dafa395f57c72dd728ad032516903fd711c1f2f1eaeaf997065431eec65ff36
+    - https://download.jetbrains.com/kotlin/native/target-sysroot-1-linux-glibc-arm64.tar.gz : 09983b77875e376b5ae05eeff470d371e8c2832f492b3dbf92cbe08ef240d00b
+    - https://download.jetbrains.com/kotlin/native/target-sysroot-2-mipsel.tar.gz : 8ecdc6382db848ce55938c516bbea0ebd9fc20e7f6df478e9af41d467b6fa683
+    - https://download.jetbrains.com/kotlin/native/target-sysroot-2-raspberrypi.tar.gz : b0c7db1e5408d336baefa1af1f766e977ce05cc256bd24fb36be29d9816be71e
 license    : Apache-2.0
 component  : programming
 summary    : Standalone compiler toolchain for native Kotlin applications and libraries
@@ -12,33 +20,36 @@ description: |
     Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as iOS, embedded targets), or where developer is willing to produce reasonably-sized self-contained program without need to ship an additional execution runtime.
 networking : true
 environment: |
-    # prevents Gradle wrapper from failing to extract to ~/.gradle
-    export GRADLE_USER_HOME=$workdir/.gradle
-    # prevents Java from failing to create ~/.java
-    export HOME=$workdir/.home
-    # prevents Konan from failing to create ~/.konan
-    export KONAN_DATA_DIR=$workdir/.konan
-    # prevents Gradle from complaining about termcap info
+    # prevents Gradle, Konan, and Java from failing to create files in ~
+    export HOME=$workdir/tmphome
+    export GRADLE_USER_HOME=$HOME/gradle
+    export KONAN_DATA_DIR=$HOME/konan
+    # prevents Gradle from dying due to being unable to identify some terminals like Kitty
     export TERM=xterm-256color
-    # prevents Gradle from spawning daemons and never closing them
-    export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 builddeps  :
-    - llvm-clang
     - openjdk-8
 rundeps    :
     - openjdk-8
 setup      : |
-    ./gradlew dependencies:update -Ptest.disable_update=true
+    mkdir -p $KONAN_DATA_DIR/cache/
+    for FILE in $sources/*.tar.gz; do
+        if [[ $FILE != *"%version%"* ]]; then
+            cp $FILE $KONAN_DATA_DIR/cache/
+        fi
+    done
+
+    cat $pkgfiles/gradle.properties >> gradle.properties
+    ./gradlew dependencies:update
     %patch -p1 < $pkgfiles/use-cpp-11-as-std-version.patch
 build      : |
-    ./gradlew bundle -Ptest.disable_update=true
+    ./gradlew bundle
 install    : |
     mkdir -p $installdir/usr/share/kotlin-native
     cp -r dist/* $installdir/usr/share/kotlin-native/
 
     chmod -R 00644 $installdir/usr/share/kotlin-native
     chmod -R +x $installdir/usr/share/kotlin-native/bin
-    
+
     mkdir -p $installdir/usr/bin
     cd $installdir/usr/share/kotlin-native/bin
     for FILE in *; do
