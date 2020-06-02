@@ -1,6 +1,6 @@
 name       : kotlin-native
 version    : 1.3.72
-release    : 4
+release    : 5
 source     :
     - https://github.com/JetBrains/kotlin-native/archive/v1.3.72.tar.gz : 1f53ec1996b0f79ca615549fa5dc8485ef356cfab413212dceac64362ea6a13d
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
@@ -20,7 +20,7 @@ description: |
     Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as iOS, embedded targets), or where developer is willing to produce reasonably-sized self-contained program without need to ship an additional execution runtime.
 networking : true
 environment: |
-    export JAVA_HOME=/usr/lib64/openjdk-8
+    export JAVA_HOME=/usr/lib64/openjdk-11
     # prevents Gradle, Konan, and Java from failing to create files in ~
     export JAVA_OPTS="-Djava.util.prefs.userRoot=$workdir/.java"
     export GRADLE_USER_HOME="$workdir/.gradle"
@@ -28,9 +28,9 @@ environment: |
     # prevents Gradle from dying due to being unable to identify some terminals like Kitty
     export TERM=xterm-256color
 builddeps  :
-    - openjdk-8
+    - openjdk-11
 rundeps    :
-    - openjdk-8
+    - openjdk-11
 setup      : |
     mkdir -p $KONAN_DATA_DIR/dependencies/
     for FILE in $sources/*.tar.gz; do
