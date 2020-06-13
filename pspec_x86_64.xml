@@ -3120,8 +3120,8 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2020-05-30</Date>
+        <Update release="6">
+            <Date>2020-06-03</Date>
             <Version>1.3.72</Version>
             <Comment>Packaging update</Comment>
             <Name>Campbell Jones</Name>
