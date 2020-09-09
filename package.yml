@@ -1,8 +1,8 @@
 name       : kotlin-native
-version    : 1.4.0
-release    : 7
+version    : 1.4.10
+release    : 8
 source     :
-    - https://github.com/JetBrains/kotlin-native/archive/v1.4.0.tar.gz : dff9d2a771af37bd43dbf31fb1501ec3a63487531b98f6b174e1e0de45e23eaf
+    - https://github.com/JetBrains/kotlin-native/archive/v1.4.10.tar.gz : dd2870d9722e32bc10bfb133fd4eb4fd5d59ca7b4ad1191d20ead035cd6ee279
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-2-linux-mips.tar.gz : b1703b2f0e1fc9e5620330f1d43c00b85ae65289796a51b827db81335207ff01
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-3-linux-x86-64.tar.gz : ca25fc933fe45deb142f2672d3773227a65e652ebeb7bc6cc8425f747c5f8912
@@ -36,7 +36,7 @@ setup      : |
     done
 build      : |
     export GRADLE_USER_HOME="$workdir/.gradle_home"
-    
+
     gradle :dependencies:update bundle --no-daemon --stacktrace -Ptest.disable_update=true
 install    : |
     install -Dm 00755 dist/bin/* -t $installdir/usr/share/kotlin-native/bin/
