@@ -1,6 +1,6 @@
 name       : kotlin-native
 version    : 1.4.30
-release    : 11
+release    : 12
 source     :
     - https://github.com/JetBrains/kotlin-native/archive/v1.4.30.tar.gz : 9a9d1d193fc19d7316f2512a1d63abe6a65d9b3bdd5f80050c0909715788101e
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
@@ -41,7 +41,6 @@ build      : |
 
     gradle :dependencies:update bundle \
         --no-daemon \
-        --parallel \
         --stacktrace \
         -Ptest.disable_update=true
 install    : |
