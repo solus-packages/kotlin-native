@@ -1,0 +1,31 @@
+From f4638104a5a3daecbc5f2b3442a3bf89de5c8b17 Mon Sep 17 00:00:00 2001
+From: Campbell Jones <git@serebit.com>
+Date: Wed, 3 Feb 2021 15:31:08 -0500
+Subject: [PATCH] resolve build error due to resolution ambiguity
+
+---
+ dependencyPacker/build.gradle.kts | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/dependencyPacker/build.gradle.kts b/dependencyPacker/build.gradle.kts
+index 0f53b2586..75f9d699a 100644
+--- a/dependencyPacker/build.gradle.kts
++++ b/dependencyPacker/build.gradle.kts
+@@ -53,12 +53,12 @@ inline fun <reified T: AbstractArchiveTask> createLlvmPackingTask(
+         whitelist?.let {
+             it.readLines()
+                     .filter { !it.startsWith("#") && it.isNotBlank() }
+-                    .forEach(this::include)
++                    .forEach { include(it) }
+         }
+         blacklist?.let {
+             it.readLines()
+                     .filter { !it.startsWith("#") && it.isNotBlank() }
+-                    .forEach(this::exclude)
++                    .forEach { exclude(it) }
+         }
+         from(propertiesLoader.absoluteLlvmHome)
+         destinationDirectory.set(buildDir.resolve("artifacts"))
+-- 
+2.30.0
+

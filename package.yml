@@ -1,14 +1,16 @@
 name       : kotlin-native
-version    : 1.4.21
-release    : 10
+version    : 1.4.30
+release    : 11
 source     :
-    - https://github.com/JetBrains/kotlin-native/archive/v1.4.21.tar.gz : ebd56cbce6f069c88372eb3ff6bf69b6e638d0c6607800fea2e13579b8b9872b
+    - https://github.com/JetBrains/kotlin-native/archive/v1.4.30.tar.gz : 9a9d1d193fc19d7316f2512a1d63abe6a65d9b3bdd5f80050c0909715788101e
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
+    - https://download.jetbrains.com/kotlin/native/lldb-3-linux.tar.gz : 94240b9d7fdc72455af8472ce0088d3177a4840b409ec1b5e6be255ab20e4182
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-2-linux-mips.tar.gz : b1703b2f0e1fc9e5620330f1d43c00b85ae65289796a51b827db81335207ff01
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-3-linux-x86-64.tar.gz : ca25fc933fe45deb142f2672d3773227a65e652ebeb7bc6cc8425f747c5f8912
     - https://download.jetbrains.com/kotlin/native/target-toolchain-2-linux-android_ndk.tar.gz : c53c127a26eec3e471a2f8fcb88484b8b22832aafd9115205b33beb84255dd10
     - https://download.jetbrains.com/kotlin/native/target-sysroot-1-android_ndk.tar.gz : 7dafa395f57c72dd728ad032516903fd711c1f2f1eaeaf997065431eec65ff36
     - https://download.jetbrains.com/kotlin/native/target-sysroot-1-linux-glibc-arm64.tar.gz : 09983b77875e376b5ae05eeff470d371e8c2832f492b3dbf92cbe08ef240d00b
+    - https://download.jetbrains.com/kotlin/native/target-sysroot-2-mips.tar.gz : b8d3dada1afc2503aadf348d8aed9980f2738f90f20ce6ac265b47cf6f16b7a4
     - https://download.jetbrains.com/kotlin/native/target-sysroot-2-mipsel.tar.gz : 8ecdc6382db848ce55938c516bbea0ebd9fc20e7f6df478e9af41d467b6fa683
     - https://download.jetbrains.com/kotlin/native/target-sysroot-2-raspberrypi.tar.gz : b0c7db1e5408d336baefa1af1f766e977ce05cc256bd24fb36be29d9816be71e
 license    : Apache-2.0
@@ -32,11 +34,16 @@ setup      : |
         tar -xzf $FILE -C $KONAN_DATA_DIR/dependencies/
         echo $(basename -s .tar.gz $FILE) >> $KONAN_DATA_DIR/dependencies/.extracted
     done
+
+    %patch -p1 < $pkgfiles/0001-resolve-build-error-due-to-resolution-ambiguity.patch
 build      : |
     export GRADLE_USER_HOME="$workdir/.gradle_home"
-    export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$workdir/.java_prefs/.userPrefs -Djava.util.prefs.systemRoot=$workdir/.java_prefs"
 
-    gradle :dependencies:update bundle --no-daemon --stacktrace -Ptest.disable_update=true
+    gradle :dependencies:update bundle \
+        --no-daemon \
+        --parallel \
+        --stacktrace \
+        -Ptest.disable_update=true
 install    : |
     install -Dm 00755 dist/bin/* -t $installdir/usr/share/kotlin-native/bin/
     cp -r dist/{klib,konan,tools} $installdir/usr/share/kotlin-native/
