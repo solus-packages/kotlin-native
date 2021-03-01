@@ -1,8 +1,8 @@
 name       : kotlin-native
-version    : 1.4.30
-release    : 12
+version    : 1.4.31
+release    : 13
 source     :
-    - https://github.com/JetBrains/kotlin-native/archive/v1.4.30.tar.gz : 9a9d1d193fc19d7316f2512a1d63abe6a65d9b3bdd5f80050c0909715788101e
+    - https://github.com/JetBrains/kotlin-native/archive/1.4.31.tar.gz : 8198a7ed6dc99c5b71b194ddeb9d28f6cee1be74ae66b28e5358478bbb12502f
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
     - https://download.jetbrains.com/kotlin/native/lldb-3-linux.tar.gz : 94240b9d7fdc72455af8472ce0088d3177a4840b409ec1b5e6be255ab20e4182
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-2-linux-mips.tar.gz : b1703b2f0e1fc9e5620330f1d43c00b85ae65289796a51b827db81335207ff01
@@ -30,7 +30,7 @@ environment: |
     export KONAN_DATA_DIR="$workdir/.konan_home"
 setup      : |
     mkdir -p $KONAN_DATA_DIR/dependencies/
-    for FILE in $(find $sources -type f -not -name "v%version%*.tar.gz"); do
+    for FILE in $(find $sources -type f -not -name "%version%*.tar.gz"); do
         tar -xzf $FILE -C $KONAN_DATA_DIR/dependencies/
         echo $(basename -s .tar.gz $FILE) >> $KONAN_DATA_DIR/dependencies/.extracted
     done
