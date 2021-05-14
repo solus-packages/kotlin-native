@@ -1,4 +1,3 @@
-libcallbacks.so:
 libcallbacks.so:JNI_OnLoad
 libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_deleteGlobalRef
 libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_derefGlobalRef
@@ -16,9 +15,6 @@ libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_ffiTypeUInt64
 libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_ffiTypeUInt8
 libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_ffiTypeVoid
 libcallbacks.so:Java_kotlinx_cinterop_JvmCallbacksKt_newGlobalRef
-libcallbacks.so:__bss_start
-libcallbacks.so:_edata
-libcallbacks.so:_end
 libcallbacks.so:_fini
 libcallbacks.so:_init
 libcallbacks.so:ffi_call
@@ -53,7 +49,6 @@ libcallbacks.so:ffi_type_uint32
 libcallbacks.so:ffi_type_uint64
 libcallbacks.so:ffi_type_uint8
 libcallbacks.so:ffi_type_void
-libclangstubs.so:
 libclangstubs.so:Java_clang_clang_kniBridge0
 libclangstubs.so:Java_clang_clang_kniBridge1
 libclangstubs.so:Java_clang_clang_kniBridge10
@@ -411,7 +406,6 @@ libclangstubs.so:clang_getCursorResultTypeAttributes
 libclangstubs.so:clang_getDeclTypeAttributes
 libclangstubs.so:clang_getResultTypeAttributes
 libclangstubs.so:clang_isExtVectorType
-libllvmstubs.so:
 libllvmstubs.so:BlockExtractorEraseFuncs
 libllvmstubs.so:DICreateArrayType
 libllvmstubs.so:DICreateAutoVariable
@@ -17648,9 +17642,6 @@ libllvmstubs.so:_ZThn8_N4llvm14PassNameParserD1Ev
 libllvmstubs.so:_ZeqRK5UnitTS1_
 libllvmstubs.so:_ZlsRN4llvm11raw_ostreamERKNS_20WebAssemblyExceptionE
 libllvmstubs.so:_ZneRK5UnitTS1_
-libllvmstubs.so:__bss_start
-libllvmstubs.so:_edata
-libllvmstubs.so:_end
 libllvmstubs.so:_fini
 libllvmstubs.so:_init
 libllvmstubs.so:llvm_regcomp
@@ -17658,15 +17649,10 @@ libllvmstubs.so:llvm_regerror
 libllvmstubs.so:llvm_regexec
 libllvmstubs.so:llvm_regfree
 libllvmstubs.so:llvm_strlcpy
-liborgjetbrainskotlinbackendkonanfilesstubs.so:
 liborgjetbrainskotlinbackendkonanfilesstubs.so:Java_org_jetbrains_kotlin_backend_konan_files_files_kniBridge0
-liborgjetbrainskotlinbackendkonanfilesstubs.so:__bss_start
-liborgjetbrainskotlinbackendkonanfilesstubs.so:_edata
-liborgjetbrainskotlinbackendkonanfilesstubs.so:_end
 liborgjetbrainskotlinbackendkonanfilesstubs.so:_fini
 liborgjetbrainskotlinbackendkonanfilesstubs.so:_init
 liborgjetbrainskotlinbackendkonanfilesstubs.so:renameAtomic
-liborgjetbrainskotlinbackendkonanhashstubs.so:
 liborgjetbrainskotlinbackendkonanhashstubs.so:CityHash64
 liborgjetbrainskotlinbackendkonanhashstubs.so:DecodeBase64
 liborgjetbrainskotlinbackendkonanhashstubs.so:EncodeBase64
@@ -17688,8 +17674,5 @@ liborgjetbrainskotlinbackendkonanhashstubs.so:PrintableLocalHash
 liborgjetbrainskotlinbackendkonanhashstubs.so:SHA1Final
 liborgjetbrainskotlinbackendkonanhashstubs.so:SHA1Init
 liborgjetbrainskotlinbackendkonanhashstubs.so:SHA1Update
-liborgjetbrainskotlinbackendkonanhashstubs.so:__bss_start
-liborgjetbrainskotlinbackendkonanhashstubs.so:_edata
-liborgjetbrainskotlinbackendkonanhashstubs.so:_end
 liborgjetbrainskotlinbackendkonanhashstubs.so:_fini
 liborgjetbrainskotlinbackendkonanhashstubs.so:_init

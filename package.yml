@@ -1,8 +1,8 @@
 name       : kotlin-native
-version    : 1.4.31
-release    : 13
+version    : "1.5"
+release    : 14
 source     :
-    - https://github.com/JetBrains/kotlin-native/archive/1.4.31.tar.gz : 8198a7ed6dc99c5b71b194ddeb9d28f6cee1be74ae66b28e5358478bbb12502f
+    - https://github.com/JetBrains/kotlin-native/archive/refs/tags/v1.5.tar.gz : 9ddd22ebc3c46a64ddd38e6e9657e1633286d7e02746c4b448d7fb0cf8fe33ff
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
     - https://download.jetbrains.com/kotlin/native/lldb-3-linux.tar.gz : 94240b9d7fdc72455af8472ce0088d3177a4840b409ec1b5e6be255ab20e4182
     - https://download.jetbrains.com/kotlin/native/target-gcc-toolchain-2-linux-mips.tar.gz : b1703b2f0e1fc9e5620330f1d43c00b85ae65289796a51b827db81335207ff01
@@ -18,7 +18,7 @@ component  : programming
 homepage   : https://kotlinlang.org/docs/reference/native-overview.html
 summary    : Standalone compiler toolchain for native Kotlin applications and libraries
 description: |
-    Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using LLVM toolchain.
+    Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using the LLVM toolchain.
 
     Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as embedded targets), or where a developer wants to produce a reasonably-sized self-contained program without the need to ship an additional execution runtime.
 networking : true
@@ -30,14 +30,15 @@ environment: |
     export KONAN_DATA_DIR="$workdir/.konan_home"
 setup      : |
     mkdir -p $KONAN_DATA_DIR/dependencies/
-    for FILE in $(find $sources -type f -not -name "%version%*.tar.gz"); do
-        tar -xzf $FILE -C $KONAN_DATA_DIR/dependencies/
+    for FILE in $(find $sources -type f -not -name "v%version%*.tar.gz"); do
+        tar -xf $FILE -C $KONAN_DATA_DIR/dependencies/
         echo $(basename -s .tar.gz $FILE) >> $KONAN_DATA_DIR/dependencies/.extracted
     done
 
     %patch -p1 < $pkgfiles/0001-resolve-build-error-due-to-resolution-ambiguity.patch
 build      : |
     export GRADLE_USER_HOME="$workdir/.gradle_home"
+    export JAVA_HOME="/usr/lib64/openjdk-11"
 
     gradle :dependencies:update bundle \
         --no-daemon \
@@ -45,6 +46,7 @@ build      : |
         -Ptest.disable_update=true
 install    : |
     install -Dm 00755 dist/bin/* -t $installdir/usr/share/kotlin-native/bin/
+    rm $installdir/usr/share/kotlin-native/bin/kotlinc # deprecated upstream, conflicts with real kotlinc
     cp -r dist/{klib,konan,tools} $installdir/usr/share/kotlin-native/
 
     sed -i "2r $pkgfiles/java-shim.txt" $installdir/usr/share/kotlin-native/bin/run_konan

@@ -9,7 +9,7 @@
         <License>Apache-2.0</License>
         <PartOf>programming</PartOf>
         <Summary xml:lang="en">Standalone compiler toolchain for native Kotlin applications and libraries</Summary>
-        <Description xml:lang="en">Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using LLVM toolchain.
+        <Description xml:lang="en">Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using the LLVM toolchain.
 
 Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as embedded targets), or where a developer wants to produce a reasonably-sized self-contained program without the need to ship an additional execution runtime.
 </Description>
@@ -18,7 +18,7 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
     <Package>
         <Name>kotlin-native</Name>
         <Summary xml:lang="en">Standalone compiler toolchain for native Kotlin applications and libraries</Summary>
-        <Description xml:lang="en">Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using LLVM toolchain.
+        <Description xml:lang="en">Kotlin/Native is a LLVM backend for the Kotlin compiler, runtime implementation and native code generation facility using the LLVM toolchain.
 
 Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as embedded targets), or where a developer wants to produce a reasonably-sized self-contained program without the need to ship an additional execution runtime.
 </Description>
@@ -30,7 +30,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="executable">/usr/bin/klib</Path>
             <Path fileType="executable">/usr/bin/konan-lldb</Path>
             <Path fileType="executable">/usr/bin/konanc</Path>
-            <Path fileType="executable">/usr/bin/kotlinc</Path>
             <Path fileType="executable">/usr/bin/kotlinc-native</Path>
             <Path fileType="executable">/usr/bin/run_konan</Path>
             <Path fileType="data">/usr/share/kotlin-native/bin/cinterop</Path>
@@ -39,9 +38,22 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/bin/klib</Path>
             <Path fileType="data">/usr/share/kotlin-native/bin/konan-lldb</Path>
             <Path fileType="data">/usr/share/kotlin-native/bin/konanc</Path>
-            <Path fileType="data">/usr/share/kotlin-native/bin/kotlinc</Path>
             <Path fileType="data">/usr/share/kotlin-native/bin/kotlinc-native</Path>
             <Path fileType="data">/usr/share/kotlin-native/bin/run_konan</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.builtin-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.builtin-cache/liborg.jetbrains.kotlin.native.platform.builtin-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.iconv-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.iconv-cache/liborg.jetbrains.kotlin.native.platform.iconv-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.linux-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.linux-cache/liborg.jetbrains.kotlin.native.platform.linux-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.posix-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.posix-cache/liborg.jetbrains.kotlin.native.platform.posix-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.zlib-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlin.native.platform.zlib-cache/liborg.jetbrains.kotlin.native.platform.zlib-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlinx.kotlinx-cli-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/org.jetbrains.kotlinx.kotlinx-cli-cache/liborg.jetbrains.kotlinx.kotlinx-cli-cache.a</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/stdlib-cache/bitcode_deps</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/cache/linux_x64-gSTATIC/stdlib-cache/libstdlib-cache.a</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/org.jetbrains.kotlinx.kotlinx-cli/default/ir/bodies.knb</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/org.jetbrains.kotlinx.kotlinx-cli/default/ir/files.knf</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/org.jetbrains.kotlinx.kotlinx-cli/default/ir/irDeclarations.knd</Path>
@@ -141,6 +153,7 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.text/2_text.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.text/3_text.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.text/4_text.knm</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.text/5_text.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.time/0_time.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin.time/1_time.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/common/stdlib/default/linkdata/package_kotlin/0_kotlin.knm</Path>
@@ -1150,6 +1163,7 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/57_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/58_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/59_linux.knm</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/60_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.linux/default/targets/linux_arm32_hfp/native/cstubs.bc</Path>
@@ -1201,8 +1215,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/44_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/45_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/46_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/47_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/48_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm32_hfp/org.jetbrains.kotlin.native.platform.posix/default/targets/linux_arm32_hfp/native/cstubs.bc</Path>
@@ -1338,8 +1350,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/45_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/46_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/47_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/48_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/49_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_arm64/org.jetbrains.kotlin.native.platform.posix/default/targets/linux_arm64/native/cstubs.bc</Path>
@@ -1423,7 +1433,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/59_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/60_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/61_linux.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/62_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.linux/default/targets/linux_mips32/native/cstubs.bc</Path>
@@ -1475,9 +1484,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/44_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/45_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/46_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/47_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/48_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/49_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mips32/org.jetbrains.kotlin.native.platform.posix/default/targets/linux_mips32/native/cstubs.bc</Path>
@@ -1554,7 +1560,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/59_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/60_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/61_linux.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/62_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.linux/default/targets/linux_mipsel32/native/cstubs.bc</Path>
@@ -1606,9 +1611,6 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/44_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/45_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/46_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/47_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/48_posix.knm</Path>
-            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform.posix/49_posix.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_mipsel32/org.jetbrains.kotlin.native.platform.posix/default/targets/linux_mipsel32/native/cstubs.bc</Path>
@@ -1683,6 +1685,7 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/57_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/58_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/59_linux.knm</Path>
+            <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform.linux/60_linux.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/linkdata/package_platform/0_platform.knm</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/manifest</Path>
             <Path fileType="data">/usr/share/kotlin-native/klib/platform/linux_x64/org.jetbrains.kotlin.native.platform.linux/default/targets/linux_x64/native/cstubs.bc</Path>
@@ -2251,6 +2254,157 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/linux_x64/linux.def</Path>
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/linux_x64/posix.def</Path>
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/linux_x64/zlib.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AVFoundation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AVKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Accelerate.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Accessibility.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Accounts.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AdSupport.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AddressBook.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AppKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AppTrackingTransparency.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ApplicationServices.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AudioToolbox.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AudioUnit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AuthenticationServices.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/AutomaticAssessmentConfiguration.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/BackgroundTasks.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/BusinessChat.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CFNetwork.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CallKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ClassKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CloudKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Cocoa.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Collaboration.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CommonCrypto.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Contacts.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ContactsUI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreAudio.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreAudioKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreAudioTypes.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreBluetooth.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreData.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreFoundation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreGraphics.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreHaptics.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreImage.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreLocation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreMIDI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreML.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreMedia.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreMotion.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreServices.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreSpotlight.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreTelephony.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreText.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreVideo.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CoreWLAN.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/CryptoTokenKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/DeviceCheck.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/DiskArbitration.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/EventKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ExceptionHandling.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ExecutionPolicy.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ExternalAccessory.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/FWAUserLib.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/FileProvider.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/FileProviderUI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/FinderSync.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ForceFeedback.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Foundation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GLKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GLUT.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GSS.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GameController.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GameKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/GameplayKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Hypervisor.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IOBluetooth.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IOBluetoothUI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IOKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IOSurface.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IOUSBHost.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/IdentityLookup.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ImageCaptureCore.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ImageIO.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Intents.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/JavaNativeFoundation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/JavaRuntimeSupport.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/JavaScriptCore.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/KernelManagement.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/LinkPresentation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/LocalAuthentication.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MLCompute.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MapKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MediaAccessibility.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MediaLibrary.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MediaPlayer.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MediaToolbox.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Metal.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MetalKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MetalPerformanceShaders.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MetalPerformanceShadersGraph.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MetricKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ModelIO.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/MultipeerConnectivity.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/NaturalLanguage.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/NearbyInteraction.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Network.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/NetworkExtension.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/NotificationCenter.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/OSLog.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/OpenDirectory.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/OpenGL.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/OpenGL3.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/OpenGLCommon.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PDFKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ParavirtualizedGraphics.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PassKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PencilKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Photos.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PhotosUI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PreferencePanes.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/PushKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Quartz.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/QuartzCore.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/QuickLook.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/QuickLookThumbnailing.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ReplayKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SafariServices.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SceneKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ScreenSaver.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ScreenTime.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ScriptingBridge.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Security.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SecurityFoundation.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SecurityInterface.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SensorKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/ServiceManagement.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Social.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SoundAnalysis.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Speech.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SpriteKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/StoreKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SystemConfiguration.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/SystemExtensions.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/UniformTypeIdentifiers.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/UserNotifications.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/UserNotificationsUI.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/VideoSubscriberAccount.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/VideoToolbox.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Virtualization.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/Vision.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/WebKit.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/builtin.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/darwin.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/iTunesLibrary.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/iconv.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/libkern.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/objc.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/osx.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/posix.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/vmnet.def</Path>
+            <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_arm64/zlib.def</Path>
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_x64/AVFoundation.def</Path>
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_x64/AVKit.def</Path>
             <Path fileType="data">/usr/share/kotlin-native/konan/platformDef/macos_x64/Accelerate.def</Path>
@@ -2935,9 +3089,9 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
         </Files>
     </Package>
     <History>
-        <Update release="13">
-            <Date>2021-02-27</Date>
-            <Version>1.4.31</Version>
+        <Update release="14">
+            <Date>2021-05-14</Date>
+            <Version>1.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Campbell Jones</Name>
             <Email>dev@serebit.com</Email>
