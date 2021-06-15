@@ -3,8 +3,8 @@
         <Name>kotlin-native</Name>
         <Homepage>https://kotlinlang.org/docs/reference/native-overview.html</Homepage>
         <Packager>
-            <Name>Campbell Jones</Name>
-            <Email>dev@serebit.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@getsol.us</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>programming</PartOf>
@@ -3089,12 +3089,12 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2021-05-14</Date>
+        <Update release="15">
+            <Date>2021-06-15</Date>
             <Version>1.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Campbell Jones</Name>
-            <Email>dev@serebit.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,12 +1,7 @@
-UNKNOWN:compress2
-UNKNOWN:crc32
 UNKNOWN:del_curterm
-UNKNOWN:dladdr
-UNKNOWN:dladdr1
 UNKNOWN:set_curterm
 UNKNOWN:setupterm
 UNKNOWN:tigetnum
-UNKNOWN:uncompress
 ld-linux-x86-64.so.2:__tls_get_addr
 libc.so.6:__assert_fail
 libc.so.6:__ctype_b_loc
@@ -460,6 +455,8 @@ libclang.so.8:clang_suspendTranslationUnit
 libclang.so.8:clang_toggleCrashRecovery
 libclang.so.8:clang_tokenize
 libclang.so.8:clang_visitChildren
+libdl.so.2:dladdr
+libdl.so.2:dladdr1
 libgcc_s.so.1:_Unwind_Backtrace
 libgcc_s.so.1:_Unwind_GetIP
 libgcc_s.so.1:_Unwind_Resume
@@ -628,4 +625,7 @@ libstdc++.so.6:__cxa_pure_virtual
 libstdc++.so.6:__cxa_rethrow
 libstdc++.so.6:__gxx_personality_v0
 libstdc++.so.6:__once_proxy
+libz.so.1:compress2
 libz.so.1:compressBound
+libz.so.1:crc32
+libz.so.1:uncompress

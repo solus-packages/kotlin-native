@@ -1,6 +1,6 @@
 name       : kotlin-native
-version    : "1.5"
-release    : 14
+version    : '1.5'
+release    : 15
 source     :
     - https://github.com/JetBrains/kotlin-native/archive/refs/tags/v1.5.tar.gz : 9ddd22ebc3c46a64ddd38e6e9657e1633286d7e02746c4b448d7fb0cf8fe33ff
     - https://download.jetbrains.com/kotlin/native/clang-llvm-8.0.0-linux-x86-64.tar.gz : a9ebf55170bdbe5e089dbf884e0bc52065b5b7bc52e9354415e25a36e10e56c5
